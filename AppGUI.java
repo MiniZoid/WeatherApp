@@ -12,7 +12,7 @@ public class AppGUI extends Canvas{
     Button searchButton, refreshButton;
     Rectangle background;
     AppController controller;
-    String displayString;
+    String displayString ="";
     Image icon;
     
     /**
@@ -65,13 +65,8 @@ public class AppGUI extends Canvas{
         g.setFont(g.getFont().deriveFont(20f));
         int lineHeight = g.getFontMetrics().getHeight();
         int y = 5;
-        try{
-            for (String line : displayString.split("\n")){
-                g.drawString(line, 50, y += lineHeight);
-            }
-        }
-        catch(Exception e){
-            //do nothing, just catching error for when output string is null.
+        for (String line : displayString.split("\n")){
+            g.drawString(line, 50, y += lineHeight);
         }
     }
 
