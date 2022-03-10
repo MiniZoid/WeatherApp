@@ -1,13 +1,13 @@
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.minizoid.JsonParser;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-
 public class ParserTest {
     
     private JsonParser parserTest;
-
 
     public ParserTest(){}
 
@@ -24,6 +24,6 @@ public class ParserTest {
     @Test
     public void parseAndLoadTest(){
         parserTest.parseAndLoad("http://api.weatherapi.com/v1/current.json?key=f22bd71b6703489fb7f41918220303&q=90001&aqi=no");
-        assertTrue(parserTest.parsed);
+        assertTrue(parserTest.isParsed());
     }
 }

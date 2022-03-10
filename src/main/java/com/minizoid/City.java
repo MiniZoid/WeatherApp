@@ -1,3 +1,5 @@
+package com.minizoid;
+
 import java.awt.Image;
 
 /**
@@ -101,12 +103,11 @@ public class City{
 
     @Override
     public String toString() {
-        String output = "Location:\n\n  " + town + ", " + state + 
+        return "Location:\n\n  " + town + ", " + state +
         "\n\n\nCurrent temp:\n\n  " + temp_F +" F\u00B0 / "+temp_C +" C\u00B0"+
         "\n\nFeels Like: \n\n  " + feelsLikeTemp_F + " F\u00B0 / " + feelsLikeTemp_C + " C\u00B0"+
         "\n\n\nCurrent Condition:\n\n  " + condition +
         "\n\n\nData last updated:\n  " + formattedTime[0] +"\n  " + formattedTime[1];
-        return output;
     }
 
 }

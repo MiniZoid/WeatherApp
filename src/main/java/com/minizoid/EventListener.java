@@ -1,3 +1,5 @@
+package com.minizoid;
+
 import java.awt.event.*;
 
 /**
@@ -17,10 +19,10 @@ public class EventListener extends MouseAdapter implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == appController.gui.searchButton){
-            appController.searchButtonPressed();;
+            appController.searchButtonPressed();
         }
         if(event.getSource() == appController.gui.refreshButton){
-            appController.refreshButtonPressed();;
+            appController.refreshButtonPressed();
         }
 
 

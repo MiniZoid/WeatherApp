@@ -1,3 +1,5 @@
+package com.minizoid;
+
 /**
  * A weather app that retrieves data from an API based on US zip code and displays it on a GUI
  * @author Ryan Stroz
