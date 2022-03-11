@@ -1,3 +1,5 @@
+package com.minizoid;
+
 import javax.swing.text.PlainDocument;
 import javax.swing.JTextField;
 import javax.swing.text.AttributeSet;
@@ -22,14 +24,11 @@ public class FieldRestrictor extends PlainDocument{
         this.limit = limit;
         this.field = field;
     }
-    
-    
+
     @Override   
     public void insertString(int offset, String  string, AttributeSet attr ) throws BadLocationException {
-        if (string == null){
-            return;
-        }
-        else if((getLength() + string.length()) <= limit){
+        // return is not needed in a void method
+        if((getLength() + string.length()) <= limit){
             super.insertString(offset, string, attr);
         }
     }

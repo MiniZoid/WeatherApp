@@ -1,3 +1,5 @@
+package com.minizoid;
+
 import java.io.*;
 import java.net.*;
 import javax.imageio.ImageIO;
@@ -75,11 +77,15 @@ public class JsonParser {
         catch (Exception e){
             if(AppController.bugReporting){
                 System.err.println("Error parsing JSON from URL");
-                System.err.println(e);
+                e.printStackTrace();
             }
             parsed = false;
         }
         return null;        
+    }
+
+    public boolean isParsed() {
+        return parsed;
     }
 }
 
